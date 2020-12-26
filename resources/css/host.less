@@ -1,0 +1,61 @@
+html, body {
+    background: #262626;
+    text-align: center;
+
+    #gameNanoId {
+        font-size: 64px;
+        color: rgba(255, 255, 255, 0.5);
+        letter-spacing: 20px;
+        margin-right: -20px;
+        height: 78px;
+    }
+
+    #letter {
+        height: 560px;
+        font-size: 512px;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 1);
+        text-align: center;
+        margin-top: -40px;
+        margin-bottom: 40px;
+        transition: 0.4s all;
+        transform-origin: center;
+        transform: translateZ(0.1px);
+
+        &.hidden {
+            transform: scale(0.8);
+        }
+
+        .ready {
+            font-weight: normal;
+            font-size: 156px;
+            line-height: 624px;
+            letter-spacing: 10px;
+            color: rgba(255, 255, 255, 0.1);
+            user-select: none;
+        }
+    }
+
+    #timer {
+        font-size: 88px;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 1);
+        text-align: center;
+        margin-bottom: 40px;
+        will-change: transform;
+        transform: translateZ(0.1px);
+    }
+
+    button {
+        font-size: 28px;
+        width: 200px;
+        color: rgba(0, 0, 0, 0.8);
+        background: rgba(255, 255, 255, 0.7);
+        
+        &:hover {
+            color: rgba(0, 0, 0, 1);
+            background: rgba(255, 255, 255, 1);
+        }
+        
+    }
+}
