@@ -1,19 +1,19 @@
-async function getSecrets() {
-    const request = await fetch(`secrets.json`);
-    const secrets = await request.json();
+async function getConfig() {
+    const request = await fetch(`config.json`);
+    const config = await request.json();
 
-    return secrets;
+    return config;
 }
 
 async function getServerAddress() {
-    const secrets = await getSecrets();
+    const config = await getConfig();
 
     let server;
 
     if (window.location.hostname === 'localhost') {
-        server = secrets.server.local;
+        server = config.server.local;
     } else {
-        server = secrets.server.production;
+        server = config.server.production;
     }
 
     return server;
