@@ -132,8 +132,7 @@ async function markAnswerSheetAsPlayed(nanoId, answerSheetIndex) {
 
 const introScreen = document.querySelector('.playGame'),
     gameNanoIdInputField = introScreen.querySelector('input'),
-    answerSheetsContainer = document.querySelector('#sheets'),
-    inBetweenAnswerSheets = document.querySelector('#inBetweenAnswerSheets');
+    answerSheetsContainer = document.querySelector('#sheets');
 
 gameNanoIdInputField.onkeyup = function (e) {
     const keysToIgnore = [
