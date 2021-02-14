@@ -53,7 +53,7 @@ async function renderAnswerSheet(gameData, answerSheetData, answerSheetId) {
 
     const doneButton = document.createElement('button');
     doneButton.classList = 'doneButton';
-    doneButton.innerText = 'Done';
+    doneButton.innerText = 'Lock Answers';
     doneButton.onclick = function () {
         const doneButton = this;
         const nextanswerSheetId = `sheet_${answerSheetIndex + 1}`;
@@ -64,7 +64,7 @@ async function renderAnswerSheet(gameData, answerSheetData, answerSheetId) {
         doneButton.classList.add('hidden');
 
         setTimeout(function () {
-            doneButton.innerText = 'Next';
+            doneButton.innerText = 'Go to Next Level';
             doneButton.classList.remove('hidden');
         }, 300);
 
